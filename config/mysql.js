@@ -1,9 +1,12 @@
 const mysql = require('mysql');
 
+// use local machine xampp server
+// turn on the apache and mysql server both
+
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
+  host: 'localhost', // use your localhost
+  user: 'root', // use your username
+  password: '', // use yor password
 });
 
 // Check if the database exists; if not, create it

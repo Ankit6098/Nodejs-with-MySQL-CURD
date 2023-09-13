@@ -1,9 +1,11 @@
 console.log('script loaded');
 
-const editButton = document.querySelector('.edit-button');
-const updateForm = document.querySelector('.update-form');
+const editButton = document.querySelectorAll('.edit-button');
+const updateForm = document.querySelectorAll('.update-form');
 
-editButton.addEventListener('click', () => {
-    console.log('button click');
-    updateForm.style.display = "block";
-})
+for (let i = 0; i < editButton.length; i++) {
+    editButton[i].addEventListener('click', () => {
+        console.log('button click');
+        updateForm[i].style.display = "block";
+    })
+}

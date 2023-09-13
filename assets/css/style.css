@@ -1,0 +1,8 @@
+.edit-button {
+    color: blue;
+    cursor: pointer;
+}
+
+.update-form {
+    display: none;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h1>Todo List</h1>
+    
+    <form action="/create" method="post">
+        <input type="text" name="task" placeholder="Add a new task" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul>
+        <% todos.forEach(todo => { %>
+            <li>
+                <%= todo.task %>
+                <form action="/update/<%= todo.id %>" method="post" class="update-form">
+                    <input type="text" name="updatedTask" placeholder="Add a updated task" required>
+                    <button type="submit">Update</button>
+                </form>
+                <span class="edit-button">Edit</span>
+                <a href="/delete/<%= todo.id %>">Delete</a>
+            </li>
+        <% }); %>
+    </ul>
+
+    <script src="js/script.js"></script>
+</body> 
+</html>
